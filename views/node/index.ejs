@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show All Nodes</title>
+</head>
+<body>
+    <h2>All Nodes</h2><br>
+    <form action="/nodes/new" method="get">
+        <button>Add New Node</button>
+    </form>
+
+    <ul>
+        <% for(let data of nodes){ %>
+         <li><a href="/nodes/<%= data._id %>"><%= data.node %></a></li>
+
+            <% } %>
+    </ul>
+
+</body>
+</html>
